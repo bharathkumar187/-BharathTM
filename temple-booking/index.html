@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pooja Application | Rajakaliamman Temple</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-surface": "#28180b",
+                    "secondary-container": "#e12435",
+                    "surface-dim": "#f2d4bf",
+                    "surface-variant": "#fbddc7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#d3ae36",
+                    "inverse-primary": "#ffb77a",
+                    "surface-container-high": "#ffe3cf",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#554336",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#735c00",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "surface-bright": "#fff8f5",
+                    "surface-container": "#ffeadc",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#dbc2b0",
+                    "on-secondary-fixed": "#410005",
+                    "on-secondary-fixed-variant": "#930018",
+                    "primary-fixed-dim": "#ffb77a",
+                    "primary-container": "#ff9933",
+                    "on-background": "#28180b",
+                    "inverse-surface": "#3f2d1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb3af",
+                    "surface": "#fff8f5",
+                    "on-primary-fixed": "#2e1500",
+                    "inverse-on-surface": "#ffede2",
+                    "on-primary-container": "#693800",
+                    "surface-container-low": "#fff1e9",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "primary": "#8f4e00",
+                    "secondary-fixed": "#ffdad7",
+                    "secondary": "#bb0022",
+                    "primary-fixed": "#ffdcc2",
+                    "outline": "#887364",
+                    "on-tertiary-container": "#544200",
+                    "surface-tint": "#8f4e00",
+                    "tertiary-fixed": "#ffe088",
+                    "background": "#fff8f5",
+                    "surface-container-highest": "#fbddc7",
+                    "on-primary-fixed-variant": "#6d3a00"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "48px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Plus Jakarta Sans"]
+                },
+                "fontSize": {
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                }
+            },
+        },
+    }
+</script>
+</head>
+<body class="bg-background text-on-surface font-body-md mandala-pattern min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high border-b-2 border-tertiary-container dark:border-tertiary shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center px-gutter w-full max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim tracking-tight">
+                Rajakaliamman Temple
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-title-lg" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-title-lg" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-title-lg" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-title-lg" href="#">Contact</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-title-lg text-title-lg" href="#">Poojas</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-md text-label-md rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-md">
+                    Apply Pooja
+                </button>
+<span class="material-symbols-outlined text-primary text-3xl cursor-pointer hover:scale-110 transition-transform">account_circle</span>
+</div>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-12">
+<!-- Hero Section -->
+<section class="mb-16 text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg mb-4 text-primary">Sacred Pooja Application</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">Connect with the divine through our traditional ceremonies. Every application is handled with utmost devotion and sanctity.</p>
+<div class="flex items-center justify-center gap-2 mt-6">
+<div class="h-px w-12 bg-tertiary-container"></div>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">flare</span>
+<div class="h-px w-12 bg-tertiary-container"></div>
+</div>
+</section>
+<!-- Multi-Step Form Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Stepper Sidebar -->
+<aside class="lg:col-span-3">
+<div class="sticky top-32 space-y-8">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4 group cursor-pointer" onclick="goToStep(1)">
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold step-active transition-all" id="step-1-circle">1</div>
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Step 1</p>
+<p class="font-title-lg text-title-lg text-primary" id="step-1-label">Select Pooja</p>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant ml-5"></div>
+<div class="flex items-center gap-4 group cursor-pointer" onclick="goToStep(2)">
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold step-inactive transition-all" id="step-2-circle">2</div>
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Step 2</p>
+<p class="font-title-lg text-title-lg" id="step-2-label">Devotee Details</p>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant ml-5"></div>
+<div class="flex items-center gap-4 group cursor-pointer" onclick="goToStep(3)">
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold step-inactive transition-all" id="step-3-circle">3</div>
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Step 3</p>
+<p class="font-title-lg text-title-lg" id="step-3-label">Summary</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low border border-tertiary-container/30 rounded-xl relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">temple_hindu</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Need Guidance?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Our temple priests are available to help you choose the right Pooja for your specific needs.</p>
+<button class="flex items-center gap-2 text-secondary font-bold hover:underline">
+<span class="material-symbols-outlined">call</span>
+                            Contact Temple Desk
+                        </button>
+</div>
+</div>
+</aside>
+<!-- Form Canvas -->
+<div class="lg:col-span-9 bg-surface p-unit md:p-12 rounded-xl border border-outline-variant shadow-lg relative mandala-pattern">
+
+<!-- Step 1: Select Pooja -->
+<div class="space-y-8 animate-in fade-in duration-500" id="step-1">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Choose your Offering</h2>
+<p class="text-on-surface-variant">Select the type of spiritual service you wish to perform.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Pooja Card 1 -->
+<div class="pooja-card relative p-6 border-2 border-outline-variant rounded-xl cursor-pointer hover:border-primary-container transition-all hover:bg-surface-bright flex flex-col justify-between group active:scale-95" data-pooja="Dravidian Archana" data-price="51" onclick="selectPooja(this)">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">local_florist</span>
+<span class="font-title-lg text-title-lg text-tertiary">RM 51</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Dravidian Archana</h3>
+<p class="text-sm text-on-surface-variant">Basic ceremonial offering with flowers, chanting of 108 names of the deity.</p>
+</div>
+<div class="mt-4 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity select-hint">
+                                Select Offering <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Pooja Card 2 -->
+<div class="pooja-card relative p-6 border-2 border-outline-variant rounded-xl cursor-pointer hover:border-primary-container transition-all hover:bg-surface-bright flex flex-col justify-between group active:scale-95" data-pooja="Maha Abishegam" data-price="251" onclick="selectPooja(this)">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">water_drop</span>
+<span class="font-title-lg text-title-lg text-tertiary">RM 251</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Maha Abishegam</h3>
+<p class="text-sm text-on-surface-variant">Sacred bathing of the deity with 11 holy substances including milk, honey, and sandal.</p>
+</div>
+<div class="mt-4 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity select-hint">
+                                Select Offering <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Pooja Card 3 -->
+<div class="pooja-card relative p-6 border-2 border-outline-variant rounded-xl cursor-pointer hover:border-primary-container transition-all hover:bg-surface-bright flex flex-col justify-between group active:scale-95" data-pooja="Sahasranama Pooja" data-price="101" onclick="selectPooja(this)">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">menu_book</span>
+<span class="font-title-lg text-title-lg text-tertiary">RM 101</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Sahasranama Pooja</h3>
+<p class="text-sm text-on-surface-variant">Chanting of 1008 sacred names for comprehensive blessings and prosperity.</p>
+</div>
+<div class="mt-4 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity select-hint">
+                                Select Offering <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Pooja Card 4 -->
+<div class="pooja-card relative p-6 border-2 border-outline-variant rounded-xl cursor-pointer hover:border-primary-container transition-all hover:bg-surface-bright flex flex-col justify-between group active:scale-95" data-pooja="Anna Dhanam" data-price="501" onclick="selectPooja(this)">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">restaurant</span>
+<span class="font-title-lg text-title-lg text-tertiary">RM 501</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Anna Dhanam</h3>
+<p class="text-sm text-on-surface-variant">Sponsoring a meal for devotees. The highest form of charity in Vedic tradition.</p>
+</div>
+<div class="mt-4 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity select-hint">
+                                Select Offering <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-label-md text-label-md text-on-surface-variant italic" id="selected-pooja-info">No Pooja selected</span>
+</div>
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed transition-all" disabled id="step1-next" onclick="goToStep(2)">
+                            Continue to Details
+                        </button>
+</div>
+</div>
+
+<!-- Step 2: Devotee Details -->
+<div class="hidden space-y-8 animate-in slide-in-from-right duration-500" id="step-2">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Devotee Information</h2>
+<p class="text-on-surface-variant">Provide the sacred details required for the Sankalpam.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Full Name</label>
+<input class="w-full bg-transparent border-b-2 border-outline focus:border-primary outline-none py-2 font-body-lg text-body-lg transition-colors" id="devotee-name" placeholder="Enter name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Nakshatram (Star)</label>
+<select class="w-full bg-transparent border-b-2 border-outline focus:border-primary outline-none py-2 font-body-lg text-body-lg transition-colors" id="nakshatram">
+<option value="">Select Nakshatram</option>
+<option>Aswini</option><option>Bharani</option><option>Krithika</option><option>Rohini</option>
+<option>Mrigashira</option><option>Ardra</option><option>Punarvasu</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Gothram</label>
+<input class="w-full bg-transparent border-b-2 border-outline focus:border-primary outline-none py-2 font-body-lg text-body-lg transition-colors" id="gothram" placeholder="Enter Gothram" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Ceremony Date</label>
+<input class="w-full bg-transparent border-b-2 border-outline focus:border-primary outline-none py-2 font-body-lg text-body-lg transition-colors" id="pooja-date" type="date"/>
+</div>
+</div>
+<p class="text-secondary font-label-md text-label-md hidden" id="step2-error">Please fill in all fields before continuing.</p>
+<div class="pt-8 border-t border-outline-variant flex justify-between items-center">
+<button class="px-6 py-3 border-2 border-outline text-on-surface-variant font-bold rounded-lg hover:bg-surface-variant transition-all" onclick="goToStep(1)">
+                            Back
+                        </button>
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg hover:brightness-110 transition-all" onclick="goToStep(3)">
+                            Review Summary
+                        </button>
+</div>
+</div>
+
+<!-- Step 3: Summary -->
+<div class="hidden space-y-8 animate-in zoom-in duration-500" id="step-3">
+<div class="text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-tertiary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h2 class="font-headline-md text-headline-md text-primary">Summary of Offering</h2>
+<p class="text-on-surface-variant italic">Please verify the details before proceeding to confirmation.</p>
+</div>
+<div class="bg-surface-container-low border-2 border-dashed border-outline-variant rounded-2xl p-8 space-y-6 relative">
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Selected Service</h4>
+<p class="font-headline-sm text-headline-sm text-primary" id="summary-pooja">—</p>
+</div>
+<div class="text-right">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Donation</h4>
+<p class="font-headline-sm text-headline-sm text-tertiary" id="summary-price">—</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Devotee</h4>
+<p class="font-title-lg text-title-lg" id="summary-name">—</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Star / Nakshatram</h4>
+<p class="font-title-lg text-title-lg" id="summary-nakshatram">—</p>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Gothram</h4>
+<p class="font-title-lg text-title-lg" id="summary-gothram">—</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase">Ceremony Date</h4>
+<p class="font-title-lg text-title-lg" id="summary-date">—</p>
+</div>
+</div>
+</div>
+</div>
+<p class="text-secondary font-label-md text-label-md hidden text-center" id="step3-error">Something went wrong. Please try again.</p>
+<div class="pt-8 border-t border-outline-variant flex justify-between items-center">
+<button class="px-6 py-3 border-2 border-outline text-on-surface-variant font-bold rounded-lg hover:bg-surface-variant transition-all" onclick="goToStep(2)">
+                            Back
+                        </button>
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg hover:brightness-110 disabled:opacity-60 transition-all flex items-center gap-2" id="submit-btn" onclick="submitBooking()">
+<span id="submit-btn-text">Confirm &amp; Submit</span>
+<span class="spinner hidden" id="submit-spinner"></span>
+</button>
+</div>
+</div>
+
+<!-- Step 4: Confirmation -->
+<div class="hidden space-y-8 text-center animate-in zoom-in duration-500 py-8" id="step-4">
+<span class="material-symbols-outlined text-7xl text-tertiary-container" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<h2 class="font-headline-md text-headline-md text-primary">Sankalpam Received</h2>
+<p class="text-on-surface-variant max-w-md mx-auto">Your Pooja application has been recorded. Our priests will perform the ceremony with full devotion on your chosen date.</p>
+<div class="inline-block bg-surface-container-low border border-tertiary-container/40 rounded-xl px-8 py-4">
+<p class="font-label-md text-label-md uppercase text-on-surface-variant">Booking Reference</p>
+<p class="font-headline-sm text-headline-sm text-primary" id="booking-ref">—</p>
+</div>
+<div class="pt-4">
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg hover:brightness-110 transition-all" onclick="resetForm()">
+                            Submit Another Application
+                        </button>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+<footer class="bg-surface dark:bg-surface-container-high border-t-2 border-tertiary-container dark:border-tertiary py-6 text-center text-on-surface-variant text-sm">
+        © 2026 Rajakaliamman Temple. All offerings are made with devotion.
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
